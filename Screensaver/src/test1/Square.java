@@ -1,6 +1,6 @@
 package test1;
 
-import screensaver.Screensaver;
+import test1.Screensaver;
 
 public class Square {
 	int x;	//The x-coordinate of the square
@@ -14,7 +14,7 @@ public class Square {
 	//Constructor that sets all the variables
 	Square(int c, int d, int e){
 		x = 0 - d;
-		y = Screensaver.height/2 + height/2;
+		y = Screensaver.getHeight()/2 + height/2;
 		height = c;
 		width = d;
 		startPosition = e;
@@ -49,8 +49,8 @@ public class Square {
 			case 0:
 				x +=2;
 				y --;
-				if (x == Screensaver.width){
-					y = Screensaver.height/4 ;
+				if (x == Screensaver.getWidth()){
+					y = Screensaver.getHeight()/4 ;
 					checkPositionY();
 					phase ++;
 				}
@@ -59,9 +59,9 @@ public class Square {
 			case 1:
 				x -= 2;
 				y ++;
-				if (y == Screensaver.height + 500){
-					x = Screensaver.width/2;
-					y = Screensaver.height/2;
+				if (y == Screensaver.getHeight() + 500){
+					x = Screensaver.getWidth()/2;
+					y = Screensaver.getHeight()/2;
 					checkPositionX();
 					width = 0;
 					height = 0;
@@ -74,7 +74,7 @@ public class Square {
 				height += 6;
 				x -= 3;
 				y -= 3;
-				if(width > Screensaver.width * 4){
+				if(width > Screensaver.getWidth() * 4){
 					phase = 0;
 					stage++;
 				}

@@ -14,7 +14,7 @@ public class Screensaver {
 	static int width = (int) screenSize.getWidth();
 	static int height = (int) screenSize.getHeight();
 	//Holds the number of objects going around the screen
-	static int numObjects = 4;
+	int numObjects = 4;
 	
 	public static void startStars(star [] stars, colour [] colours){
 		//Goes through and initializes the star objects and their colours

@@ -10,5 +10,14 @@ public class Screensaver {
 	public static int width = (int) screenSize.getWidth();
 	public static int height = (int) screenSize.getHeight();
 	//Holds the number of objects going around the screen
-	public static int numObjects = 4;
+	static int numObjects = 4;
+	
+	
+	public static int getHeight() {
+		return height;
+	}
+
+	public static int getWidth() {
+		return width;
+	}
 }
